@@ -2,7 +2,7 @@
 Frequently Used Commands in Linux CLI
 --------------------------------------
 
-mkdir python-projects : Creates a file named "python-projects"
+'mkdir python-projects' : Creates a file named "python-projects"
 touch Readme.md
 rm Readme.md : removes the file
 rm -r python-projects : remove the directory and all the files in it. -r means recursive
