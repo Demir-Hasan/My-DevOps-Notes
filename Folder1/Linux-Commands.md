@@ -28,14 +28,14 @@
 ----------------
 VIM Text Editor
 ----------------
-dd : delete the line on which cursor is located
-d10d : delete the 10 line
-u : undo the changes
-0 : jump to beginning of the line
-A : jump to the end of the text
-$ : jump to end of the line
-12G : goes to line12
-/ : search mode n: jumps to next match
+- `dd` : delete the line on which cursor is located
+- `d10d` : delete the 10 line
+- `u` : undo the changes
+- `0` : jump to beginning of the line
+- `A` : jump to the end of the text
+- `$` : jump to end of the line
+- `12G` : goes to line12
+- `/` : search mode n: jumps to next match
 
 ----------------------------
 User - Groups - Permissions
