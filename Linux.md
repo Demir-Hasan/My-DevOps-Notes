@@ -1,22 +1,22 @@
 ## Frequently Used Commands in Linux CLI
 
 
-- `mkdir python-projects` : Creates a file named "python-projects"
-- touch Readme.md
-- rm Readme.md : removes the file
-- rm -r python-projects : remove the directory and all the files in it. -r means recursive
-- cd / : takes you to root folder
-- cd ../.. goes back two times
-- cp Readme.md Text.md
-- ls -R Documents: it shows all the folders in Documnets and its contents
-- Ctrl + r = Search history
-- history 20 : shows the last 20 commands
-- cat : shows the content of the file
-- cat /etc/os-release
-- lscpu
-- lsmem
+- `mkdir` python-projects : Creates a file named "python-projects"
+- `touch` Readme.md
+- `rm` Readme.md : removes the file
+- `rm -r` python-projects : remove the directory and all the files in it. -r means recursive
+- `cd /` : takes you to root folder
+- `cd ../..` goes back two times
+- `cp` Readme.md Text.md
+- `ls -R` Documents: it shows all the folders in Documnets and its contents
+- `Ctrl + r` = Search history
+- `history 20` : shows the last 20 commands
+- `cat` : shows the content of the file
+- `cat /etc/os-release`
+- `lscpu`
+- `lsmem`
 
-su - [user]
+`su -` [user]
 
 ----------------------------
 Installing/Uninstalling App
