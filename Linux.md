@@ -16,14 +16,14 @@
 - `lscpu`
 - `lsmem`
 
-`su -` [user]
+- `su -` [user]
 
-----------------------------
-Installing/Uninstalling App
-----------------------------
-sudo apt search [the name of the software]
-sudo apt install [the name of the software]
-sudo apt remove [the name of the software]
+
+##Installing/Uninstalling App
+
+- `sudo apt search` {the name of the software}
+- `sudo apt install` the name of the software
+- `sudo apt remove` the name of the software
 
 ----------------
 VIM Text Editor
