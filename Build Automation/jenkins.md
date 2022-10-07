@@ -27,7 +27,7 @@ The password is also stored at:
 
 ## Installing Tools
 
-There is 2 ways to install tools on Jenkins
+There are 2 ways to install tools on Jenkins
 
 1 Jenkins plugins: You can install a plugin on User Interface
 2 On server : If you run Jenkins as a container, you need to install the tool inside the container while container is running. (root user)
