@@ -1,5 +1,5 @@
 ## Installing Jenkins
-There is 2 ways:
+There are 2 ways:
 - Intalling directly on the OS
 - Pulling Jenkins image and run as a container
 
@@ -29,8 +29,8 @@ The password is also stored at:
 
 There are 2 ways to install tools on Jenkins
 
-1 Jenkins plugins: You can install a plugin on User Interface
-2 On server : If you run Jenkins as a container, you need to install the tool inside the container while container is running. (root user)
+1. Jenkins plugins: You can install a plugin on User Interface
+2. On server : If you run Jenkins as a container, you need to install the tool inside the container while container is running. (root user)
 
 `docker exec -u 0 -ti [docker image ID] bash` `cat /etc/issue` `apt update` ...
 
