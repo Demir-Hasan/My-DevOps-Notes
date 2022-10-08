@@ -55,7 +55,7 @@ When we "start build" we can track the job on terminal inside the container.
 
 ## Connecting Jenkins to Github (web-hook)
 
--On Jenkins UI, after we create a new project, at the build trigger section  we select Github hook trigger for GITScm polling.
+- On Jenkins UI, after we create a new project, at the build trigger section  we select Github hook trigger for GITScm polling.
 
 - Once we created a Jenkinsfile on Github and add the URL on Jenkins, we copy the Jenkins URL to our clipboard and paste it on GitHub - Settings - Webhooks  Payload URL. The end of the URL shoul be as : `....com/github-webhook/` Then the following selector shoul be set as content type: application/json. After adding a web hook github ping the Jenkins and then when we refresh the page we will see a green check mark. 
 
