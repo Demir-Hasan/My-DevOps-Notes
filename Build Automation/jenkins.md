@@ -53,3 +53,9 @@ When we "start build" we can track the job on terminal inside the container.
 
 `docker exec -ti [docker image ID] bash` `ls /var/jenkins_home/job & /var/jenkins_home/workspace`
 
+## Connecting Jenkins to Github (web-hook)
+
+- Once we created a Jenkinsfile on Github and add the URL on Jenkins, we copy the Jenkins URL to our clipboard and paste it on GitHub - Settings - Webhooks  Payload URL. The end of the URL shoul be as : `....com/github-webhook/` Then the following selector shoul be set as content type: application/json. After adding a web hook github ping the Jenkins and then when we refresh the page we will see a green check mark. 
+
+- To give it a try we can add a text on Readme.md file. After we commit the changes, jenkins will be triggered automatically.
+
