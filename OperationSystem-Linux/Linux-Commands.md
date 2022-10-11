@@ -17,6 +17,7 @@
 - `lsmem`
 
 - `su -` [user]
+- `mv Downloads/Docker-server.pem ~/.ssh/` moving the private key file from downloads folder to ssh folder
 
 
 ##Installing/Uninstalling App
