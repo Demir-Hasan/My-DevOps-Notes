@@ -98,6 +98,13 @@ transferred, moved, and executable more than once.
 - In the abc.sh file the first line should be `#!/bin/sh` Otherwise, the OS does not recognize it to run the file.
 - To run the file we enter the following syntax to command line : `**./**abc.sh` or `**bash** abc.sh`
 - `file_name=config.yaml` echo "using file $file_name to configure something." $ indicates variable.
-- 
-- 
+- `variable_name = $(command)` : store output of a command in a variable. Example : confi
 
+```
+if [condition] 
+then
+  statement
+else
+  statement
+ fi 
+```
