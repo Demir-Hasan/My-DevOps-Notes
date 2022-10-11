@@ -88,3 +88,10 @@ User - Groups - Permissions
 
 - sudo chmod 777 test.txt
 
+-----------------
+Shell Scripting
+-----------------
+
+- When we want to execute a set of commands, we can do it by executing a file that that have all commands we want to execute. Since this is a file, it can be stored,
+transferred, moved, and executable more than once.
+
