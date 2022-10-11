@@ -17,7 +17,9 @@
 - `lsmem`
 
 - `su -` [user]
+
 - `mv Downloads/Docker-server.pem ~/.ssh/` moving the private key file from downloads folder to ssh folder
+- `ssh -i ~/.ssh/docker-server.pem ec2-user@[Public IP address from AWS]` It connects us to AWS server as ec2 user
 
 
 ##Installing/Uninstalling App
