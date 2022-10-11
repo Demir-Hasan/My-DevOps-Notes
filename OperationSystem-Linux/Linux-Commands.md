@@ -94,4 +94,10 @@ Shell Scripting
 
 - When we want to execute a set of commands, we can do it by executing a file that that have all commands we want to execute. Since this is a file, it can be stored,
 transferred, moved, and executable more than once.
+- `#!/bin/sh` is called shebang. # : sharp ! : bang
+- In the abc.sh file the first line should be `#!/bin/sh` Otherwise, the OS does not recognize it to run the file.
+- To run the file we enter the following syntax to command line : `**./**abc.sh` or `**bash** abc.sh`
+- `file_name=config.yaml` echo "using file $file_name to configure something." $ indicates variable.
+- 
+- 
 
