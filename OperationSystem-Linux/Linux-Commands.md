@@ -113,8 +113,6 @@ else
 echo "all params : $*"
 echo "number of params : $#"
 
-param=$1
-
 for param in $*
   do 
     echo $param
