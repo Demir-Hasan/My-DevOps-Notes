@@ -20,6 +20,7 @@
 
 - `mv Downloads/Docker-server.pem ~/.ssh/` moving the private key file from downloads folder to ssh folder
 - `ssh -i ~/.ssh/docker-server.pem ec2-user@[Public IP address from AWS]` It connects us to AWS server as ec2 user
+- `ps aux | grep docker` to check if docker is running
 
 
 ##Installing/Uninstalling App
@@ -43,47 +44,47 @@ VIM Text Editor
 ----------------------------
 User - Groups - Permissions
 ----------------------------
-sudo adduser [User name]
-sudo passwd [User name]
-su [User name] : change to the user
-su - : change to root user
+- sudo adduser [User name]
+- sudo passwd [User name]
+- su [User name] : change to the user
+- su - : change to root user
 
-sudo groupadd [group name]
-sudo usermod -g devops tom : Tom is added to group devops
-groups tom : shows all the groups that tom is a member
+- sudo groupadd [group name]
+- sudo usermod -g devops tom : Tom is added to group devops
+- groups tom : shows all the groups that tom is a member
 
-ls -l : shows the permission
+- ls -l : shows the permission
 
-sudo chown tom test.txt: tom becomes the owner of test file 
+- sudo chown tom test.txt: tom becomes the owner of test file 
 
-sudo chmod ( g+r g-w u+w u+x o-x o-w) [file name]
+- sudo chmod ( g+r g-w u+w u+x o-x o-w) [file name]
 
-+ add
-- remove
+- + add
+- - remove
 
-r:read
-w:write
-x:execute
+- r:read
+- w:write
+- x:execute
 
-u:user
-g:group
-o:other
+- u:user
+- g:group
+- o:other
 
-sudo chmod g=rw- [file name}
+- sudo chmod g=rw- [file name}
 
-4 read
-2 write
-1 execute
-0 no permission
+- 4 read
+- 2 write
+- 1 execute
+- 0 no permission
 
-0 ---
-1 --x
-2 -w-
-3 -wx
-4 r--
-5 r-x
-6 rw-
-7 rwx
+- 0 ---
+- 1 --x
+- 2 -w-
+- 3 -wx
+- 4 r--
+- 5 r-x
+- 6 rw-
+- 7 rwx
 
-sudo chmod 777 test.txt
+- sudo chmod 777 test.txt
 
