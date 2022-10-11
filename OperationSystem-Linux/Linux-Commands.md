@@ -108,3 +108,18 @@ else
   statement
  fi 
 ```
+
+```
+echo "all params : $*"
+echo "number of params : $#"
+
+param=$1
+
+for param in $*
+  do 
+    echo $param
+  done
+  
+- we run the file ./abc.sh param1 param2 param3 ...  
+  
+```
