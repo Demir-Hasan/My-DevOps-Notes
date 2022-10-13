@@ -121,3 +121,33 @@ for param in $*
 - we run the file ./abc.sh param1 param2 param3 ...  
   
 ```
+
+----------------------
+ENVIRONMENT VARIABLES
+----------------------
+`printevn | less`
+`printenv USER`
+`printenv | grep USER`
+`echo $USER`
+Setting an environment variable:
+`**export** DB_USERNAME = dbuser`
+
+Deleting an environment variable
+`**unset** DB_USERNAME`
+
+Persisting environment variables
+`vim .bashrc` we add our env variables in this file. 
+`source .bashrc` this command is like saving the changes or applying the changes. when we reopen the terminal changes will be there.
+
+-----------
+Networking Commands
+
+`ifconfig` network info of the machine
+`netstat` shows active connections
+`ps aux`
+`nslookup`
+`ping`
+
+
+
+
