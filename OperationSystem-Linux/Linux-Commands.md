@@ -151,12 +151,12 @@ Networking Commands
 ----------
 Establishing a SSH connection
 ---------
-- First we need to be able to connect to remote server by password. In order to do that we can use the command `SSH root@[remoter server IP` Since we use SSH in our command an SSH key pair is generated in our home directory. We can check it by `ls .ssh/`
-
-
-
-
-
-
+- First we need to be able to connect to remote server by password. In order to do that we can use the command `SSH root@[remoter server IP` 
+- `ssh-keygen -t rsa` to generate SSH key pair. 
+- id_rsa: private key | id_rsa.pub: public key
+- `cat id_rsa.pub` we copy all the data to the autorized_keys file in the remote server. 
+- Once the connection is built we can access the remote server by `SSH -i .ssh/id_rsa root@IP` or if we have only 1 connection `SSH root@IP` is enough. 
+- `scp` secure copy: this is used when we copy something from our machine to the remote server. for example: `scp test.sh root@IP:/root`
+-  
 
 
