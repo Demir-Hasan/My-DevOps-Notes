@@ -125,28 +125,37 @@ for param in $*
 ----------------------
 ENVIRONMENT VARIABLES
 ----------------------
-`printevn | less`
-`printenv USER`
-`printenv | grep USER`
-`echo $USER`
+- `printevn | less`
+- `printenv USER`
+- `printenv | grep USER`
+- `echo $USER`
 Setting an environment variable:
-`**export** DB_USERNAME = dbuser`
+- `**export** DB_USERNAME = dbuser`
 
 Deleting an environment variable
-`**unset** DB_USERNAME`
+- `**unset** DB_USERNAME`
 
 Persisting environment variables
-`vim .bashrc` we add our env variables in this file. 
-`source .bashrc` this command is like saving the changes or applying the changes. when we reopen the terminal changes will be there.
+- `vim .bashrc` we add our env variables in this file. 
+- `source .bashrc` this command is like saving the changes or applying the changes. when we reopen the terminal changes will be there.
 
 -----------
 Networking Commands
+---------------
+- `ifconfig` network info of the machine
+- `netstat` shows active connections
+- `ps aux`
+- `nslookup`
+- `ping`
 
-`ifconfig` network info of the machine
-`netstat` shows active connections
-`ps aux`
-`nslookup`
-`ping`
+----------
+Establishing a SSH connection
+---------
+- First we need to be able to connect to remote server by password. In order to do that we can use the command `SSH root@[remoter server IP` Since we use SSH in our command an SSH key pair is generated in our home directory. We can check it by `ls .ssh/`
+
+
+
+
 
 
 
