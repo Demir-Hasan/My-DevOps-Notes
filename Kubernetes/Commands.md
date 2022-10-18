@@ -33,8 +33,8 @@
 - `kubectl exec -ti NAME -- bin/bash` 
 - `kubectl delete deployment NAME`
 - `kubectl apply -f config-file.yaml`
-- ```
 
+```
 apiVersion: apps/v1
 kind: Deployment
 metadata:
