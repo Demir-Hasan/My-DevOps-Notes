@@ -15,6 +15,7 @@
 - `cat /etc/os-release`
 - `lscpu`
 - `lsmem`
+- `curl http://localhost:8080/greatings` CURL will execute a GET to the provided URL `Hello world`
 
 - `su -` [user]
 
