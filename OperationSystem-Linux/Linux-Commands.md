@@ -15,14 +15,16 @@
 - `cat /etc/os-release`
 - `lscpu`
 - `lsmem`
-- `curl http://localhost:8080/greatings` CURL will execute a GET to the provided URL `Hello world`
-- `wget http://localhost:8080/hello-world.png` download the photo `$ ls hello-world.png`
 
 - `su -` [user]
 
 - `mv Downloads/Docker-server.pem ~/.ssh/` moving the private key file from downloads folder to ssh folder
 - `ssh -i ~/.ssh/docker-server.pem ec2-user@[Public IP address from AWS]` It connects us to AWS server as ec2 user
 - `ps aux | grep docker` to check if docker is running
+
+### Working on the Internet
+- `curl http://localhost:8080/greatings` CURL will execute a GET to the provided URL `Hello world`
+- `wget http://localhost:8080/hello-world.png` download the photo `$ ls hello-world.png`
 
 
 ##Installing/Uninstalling App
