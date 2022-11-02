@@ -16,9 +16,7 @@
 - `lscpu`
 - `lsmem`
 - `curl http://localhost:8080/greatings` CURL will execute a GET to the provided URL `Hello world`
-- `$ wget http://localhost:8080/hello-world.png
-$ ls
-hello-world.png`
+- `wget http://localhost:8080/hello-world.png` download the photo `$ ls hello-world.png`
 
 - `su -` [user]
 
