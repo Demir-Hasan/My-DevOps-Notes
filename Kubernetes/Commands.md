@@ -48,6 +48,7 @@
 - It is for stateless apps
 - For stateful apps like databases statefulsets are used
 - DB are often hosted outside of K8s cluster
+- Everything CRUD is at the deployment level. Kubernetes handles the rest of it. 
 
 
 
@@ -55,7 +56,7 @@
 
 - One-node cluster
 - For test and/or learning purposes
-- Master processes and node processes run on ONE machine
+- Master processes and worker processes run on ONE node
 - Docker is pre-installed
 
 ### Kubectl
@@ -85,8 +86,37 @@
 - `kubectl describe pod NAME`
 - `kubectl exec -ti NAME -- bin/bash` 
 - `kubectl delete deployment NAME`
-- `kubectl apply -f config-file.yaml`
+- `kubectl apply -f config-file.yaml` create a deployment from a yaml file. If already created it updates the deployment
 
+### Configuration File
+Every config file has 3 parts
+- metadata
+- specification
+- status (automatically added by K8s)
+
+There is a YAML validator online to check the syntax and indentation
+
+#### Connecting Components (Labels & Selectors & Ports)
+- To establish connection we use labels and selectors
+- Metadata part containes the label
+- Spec part contains the selector
+```
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+
+```
+
+```
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  selector:
+    app: nginx
+  ports:   
 ```
 apiVersion: apps/v1
 kind: Deployment
