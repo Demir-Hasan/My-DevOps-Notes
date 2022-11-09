@@ -122,6 +122,7 @@ spec:
       port: 80
       targetPort: 8080 (It should be match the containerPort at the Deployment YAML file)
 ```
+```
 apiVersion: apps/v1
 kind: Deployment
 metadata:
