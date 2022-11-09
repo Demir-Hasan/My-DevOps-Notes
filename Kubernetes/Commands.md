@@ -39,6 +39,7 @@
 - base64 encoded
 - store things like credentials
 - as env variables
+- `echo -n 'username' | base64` it returns the encrypted word of the word in quotes. 
 #### Volumes
 - storage on local machine or remote outside of the cluster
 #### Deployment
@@ -122,6 +123,8 @@ spec:
       port: 80
       targetPort: 8080 (It should be match the containerPort at the Deployment YAML file)
 ```
+### Nginx-deployment YAML file
+
 ```
 apiVersion: apps/v1
 kind: Deployment
