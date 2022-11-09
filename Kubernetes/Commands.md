@@ -76,6 +76,8 @@
 - `minikube status` to check the components run ok.
 - `kubectl get node` display all the nodes in the cluster
 - `kubectl get pod` display the pods
+- `kubectl get pod -o wide`
+- `kubectl get deployment [NAME] -o yaml` output as a yaml format  
 - `kubectl get services`
 - `kubectl create -h` all the things we can create
 - `kubectl create deployment mongo-depl --image=mongo`
@@ -106,7 +108,6 @@ metadata:
   name: nginx-deployment
   labels:
     app: nginx
-
 ```
 
 ```
@@ -116,7 +117,10 @@ metadata:
 spec:
   selector:
     app: nginx
-  ports:   
+  ports:
+    - protocls: TCP
+      port: 80
+      targetPort: 8080 (It should be match the containerPort at the Deployment YAML file)
 ```
 apiVersion: apps/v1
 kind: Deployment
