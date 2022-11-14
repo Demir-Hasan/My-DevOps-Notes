@@ -124,6 +124,21 @@ spec:
       port: 80
       targetPort: 8080 (It should be match the containerPort at the Deployment YAML file)
 ```
+
+### Namespaces
+- You can organize resources in namespaces
+- It is like a virtual cluster inside a cluster
+- There are 4 default namespaces
+- Resource you creare are located in "default" namespaces
+- `kubectl create namespace [my-namespaca]`
+- You can create the namespace in the ConfigMap under metadate
+```
+kind: CongiMap
+metadata:
+  name: mysql-configmap
+  namespace: my-namespace
+```  
+
 ### Nginx-deployment YAML file
 
 ```
