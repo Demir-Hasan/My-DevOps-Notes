@@ -149,6 +149,18 @@ metadata:
 - `kubens` (kubenamespace) list all the namespaces and highlight the active one
 - `kubens [my-namespace]` changes active namespace to my-namepace. After changing to my-namesapce we can type commands without providing the namespace
 
+### Services
+- Each Pod has its own IP address but it is ephemeral so we use service which provide stable IP address. It also provide loadbalancing. they are good at loose coupling 
+- Service establish communication with pods via selectors, and ports in the YAML file. (In the deployment YAML file the pods have labels)
+- When you create a service, K8s creates an Enpoint object which has same name as Service. So you can keep track of which Pods are the members/endpoints of the Service
+- Service Port is arbitrary but targetPort must match the port the continer is listening at.
+- 
+- There are different types of services
+- ClusterIP Services: (Internal Service) For example, if you have 3 worker nodes in the cluster, each node have a range of ip addresses. node1(10.2.1.x), node2(10.2.2.x), node3(10.2.3.x) `kubectl get pod -o wide` you can see the details of the pods in detail.
+- Headless Services: )In the YAML file under spec set the clusterIP as "none")Client wants to communicate with 1 specific Pod directly or Pods want to talk directly with specific Pod without going to ClusterIP Service first which directs the request to a random Pod. In this case client needs to figure out IP addresses of each Pod. It is done by DNS Lookup. Headless service is used for stateful components like DBs.
+- NodePort Services: (External Service) Can have access directly from outside. nodePort attribute under ports section of the YAML file has a range between 30000 and 32767
+- LoadBalancer Services: becomes accessible externally through cloud providers LoadBalancer
+
 ### Nginx-deployment YAML file
 
 ```
