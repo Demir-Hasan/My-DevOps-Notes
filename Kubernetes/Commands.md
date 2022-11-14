@@ -131,13 +131,23 @@ spec:
 - There are 4 default namespaces
 - Resource you creare are located in "default" namespaces
 - `kubectl create namespace [my-namespaca]`
-- You can create the namespace in the ConfigMap under metadate
+- You can create the namespace in the ConfigMap under metadate (preferred way)
 ```
-kind: CongiMap
+kind: ConfigMap
 metadata:
   name: mysql-configmap
   namespace: my-namespace
 ```  
+- Why namespace?
+- Grouping namespaces into for example one for Database, one for Monitoring, one for Elastic Stack, and one for Nginx-Ingress
+- Differnt teams better use different namespaces (it help avoiding conflicts, overwriting)
+- Access and Resouce Limits on Namespaces
+- Limit CPU, RAM, Storage per namespace
+- You can't access most resources from another Namespace
+- there is a way to access to connect a resource from a different namespace
+- Creating a component in a namespace : `kubectl apply -f mysql-configmap.yaml --namespace=my-namespace` otherwise it creates the component in default namespace
+- `kubens` (kubenamespace) list all the namespaces and highlight the active one
+- `kubens [my-namespace]` changes active namespace to my-namepace. After changing to my-namesapce we can type commands without providing the namespace
 
 ### Nginx-deployment YAML file
 
