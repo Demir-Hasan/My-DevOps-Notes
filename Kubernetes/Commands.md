@@ -71,6 +71,7 @@
 - Go to official web page for the documentation
 - Minikube can run either as VM or as continer
 - Follow the instruction on the official web page
+- `minikube start --driver docker` after installing minikube in the local machine
 
 ### Commands
 
