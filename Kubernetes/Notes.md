@@ -166,7 +166,15 @@ metadata:
 - If you are on cloud, cloud providers have Cloud Load Balancer solution. You don't have to implement load balancer by yourself.
 - For security best practice, there should be seperate Proxy Server with public IP address and open port. This will be the entrypoint to cluster. 
 
-
+### Volumes
+- Why do we need volumes? Because in some cases we want our data to persist such as our mysql pod. So storage is independent from the pod lifecyle.
+- Storage must be available on all nodes.
+- Storage need to survive even if the cluster crashes.
+- Consider persisten volumes as CPU or RAM
+- It is created by YAML file
+- It needs actual physical storage like local disk, nfs server, colud storage
+- It is like external plugin to your cluster
+- 
 
 
 
