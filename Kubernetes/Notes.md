@@ -174,7 +174,10 @@ metadata:
 - It is created by YAML file
 - It needs actual physical storage like local disk, nfs server, colud storage
 - It is like external plugin to your cluster
-- 
+- In the Kubernetes documantation you can find different type of storage
+- PV are not namespaced, accessible to whole cluster
+- Local vs. Remote Volumes?
+
 
 
 
