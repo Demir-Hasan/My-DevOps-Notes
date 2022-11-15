@@ -163,7 +163,8 @@ metadata:
 ### Ingress
 - You can using the app via External Service. But this way mostly used for testing purpose. When we use ingress, the request comes to ingress first then is directed to internal service. 
 - Applying ingress.yaml file is not enough. you need an implemenatation for Ingress by Ingress Controller Pod (entrypoint to cluster, evaluestes the rules).
-- 
+- If you are on cloud, cloud providers have Cloud Load Balancer solution. You don't have to implement load balancer by yourself.
+- For security best practice, there should be seperate Proxy Server with public IP address and open port. This will be the entrypoint to cluster. 
 
 
 
