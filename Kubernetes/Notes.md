@@ -160,27 +160,16 @@ metadata:
 - NodePort Services: (External Service) Can have access directly from outside. nodePort attribute under ports section of the YAML file has a range between 30000 and 32767. NodePort Service Not for external connection in real life scenarios, mostly used for testing purpose
 - LoadBalancer Services: becomes accessible externally through cloud providers LoadBalancer
 
-### Nginx-deployment YAML file
+### Ingress
+- You can using the app via External Service. But this way mostly used for testing purpose. When we use ingress, the request comes to ingress first then is directed to internal service. 
 
-```
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: nginx-deployment
-spec:
-  selector:
-    matchLabels:
-      app: nginx
-  replicas: 2 # tells deployment to run 2 pods matching the template
-  template:
-    metadata:
-      labels:
-        app: nginx
-    spec:
-      containers:
-      - name: nginx
-        image: nginx:1.14.2
-        ports:
-        - containerPort: 80
-```
+
+
+
+
+
+
+
+
+
 
