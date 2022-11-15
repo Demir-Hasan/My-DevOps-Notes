@@ -162,6 +162,8 @@ metadata:
 
 ### Ingress
 - You can using the app via External Service. But this way mostly used for testing purpose. When we use ingress, the request comes to ingress first then is directed to internal service. 
+- Applying ingress.yaml file is not enough. you need an implemenatation for Ingress by Ingress Controller Pod (entrypoint to cluster, evaluestes the rules).
+- 
 
 
 
