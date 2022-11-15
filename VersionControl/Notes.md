@@ -8,4 +8,8 @@
 - Version Conrol keeps the history of the change in code, you can simply go back to previous version. Each change labeled with a commit message
 ### Commands
 - `git status` status of local git repo
-- 
+- `git add .` changes goes from **working directory** to **stage**
+- `git commit -m "[commit message]"` changes made in the local repository 
+- `git push` changes is updated in the remote repository
+- `git init` turning a folder into a local git repo by creating .git file inside the folder automatically
+-  
