@@ -1,0 +1,17 @@
+- Windows has two command-line shells: the Command shell and PowerShell.
+- `ipconfig /all | findstr DNS`
+- `cls` it is equivalent to clear in Linux
+- `CTRL + C` stops the proccess
+- `netstat -an` lists open ports
+- `systeminfo`
+- `cd` change directory
+- `cd ..`
+- `dir` ls in linux
+- `dir /a` ls -a
+- `[command] /?` returns help with that command
+- `mkdir [name of the directory]`
+- `rmdir [name of the directory]`
+- `rmdir /s [name of the directory]` deletes the folder which are not empty
+### PATH
+- When we want to execute a program we must be in the directory where the program is located. Otherwise windows can't open it. So if we want to reach the program no matter where we are, we can add the location of the program into our PATH.
+- 
