@@ -11,7 +11,18 @@
 - `[command] /?` returns help with that command
 - `mkdir [name of the directory]`
 - `rmdir [name of the directory]`
-- `rmdir /s [name of the directory]` deletes the folder which are not empty
-### PATH
-- When we want to execute a program we must be in the directory where the program is located. Otherwise windows can't open it. So if we want to reach the program no matter where we are, we can add the location of the program into our PATH.
+- `rmdir /s [name of the directory]` deletes the folder which are not empty /s means subdirectory
+- `E:` changing the drive
+- `tree`
+- `color /?`
+- `del` deleting file
+- `echo "some text" > text.txt` creating a text file
+- `type text.txt` cat in Linux
+- `copy [file name][target folder]`
+- `move`
+- `rename`
 - 
+### PATH
+- When we want to execute a program we must be in the directory where the program is located. Otherwise windows can't open it. So if we want to reach the program no matter where we are, we can add the location of the program into our PATH Variable. You can find it by Advanced Windows Settings > Environment Variables
+-  
+
