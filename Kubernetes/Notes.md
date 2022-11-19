@@ -80,6 +80,12 @@
 - `kubectl get pod` display the pods
 - `kubectl get pod -o wide`
 - `kubectl get pod --show-labels`
+- `kubectl label po/helloworld app=helloworldapp --overwrite` app=helloworld label is added
+- `kubectl label po/helloworld app-` app label is deleted
+- `kubectl get pod --selector env=prod` it gets you pods only whose env is production
+- `kubectl get pod --selector dev-lead!=hasan,env=staging` it gets you pods whose dev-lead is not hasan and env is staging
+- `kubectl get pods -l "release-version in (1.0,2.0)` it gets you pods only whose version is between 1.0 and 2.0
+- `kubectl delete pods -l dev-lead=hasan` it deletes pods whose dev-lead is hasan
 - `kubectl get deployment [NAME] -o yaml` output as a yaml format  
 - `kubectl get services`
 - `kubectl create -h` all the things we can create
