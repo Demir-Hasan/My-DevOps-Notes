@@ -14,3 +14,13 @@
 - `git commit -m "[commit message]"` changes made in the local repository 
 - `git push` changes is updated in the remote repository
 - `git init` turning a folder into a local git repo by creating .git file inside the folder automatically
+- `git branch` for checking if there is a new branch
+- `git pull` for getting the changes and new branches locally
+- `git checkout <branch name>` switching branch `git checkout master` switching to master branch
+- `git checkout -b feature/database-connection` create and switch the new branch called feature/database-connection
+-  
+
+### Branches
+- Best practice is a branch for each new feature and each new bug fix. (eg. feature/user-auth)
+- After testing locally developers merge their branch to master branch
+- 
