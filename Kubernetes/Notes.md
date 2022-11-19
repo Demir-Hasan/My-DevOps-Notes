@@ -79,6 +79,7 @@
 - `kubectl get node` display all the nodes in the cluster
 - `kubectl get pod` display the pods
 - `kubectl get pod -o wide`
+- `kubectl get pod --show-labels`
 - `kubectl get deployment [NAME] -o yaml` output as a yaml format  
 - `kubectl get services`
 - `kubectl create -h` all the things we can create
