@@ -19,6 +19,7 @@
 - `git checkout <branch name>` switching branch `git checkout master` switching to master branch
 - `git checkout -b feature/database-connection` create and switch the new branch called feature/database-connection
 - `git branch -d <branch name>` deletes branch
+- `git rm -r --cached <file name>` (gitignore) to update the remote repo by deleting the files
 
 ### Branches
 - Best practice is a branch for each new feature and each new bug fix. (eg. feature/user-auth)
@@ -33,3 +34,23 @@
 ### Git Rebase
 - When we push a change to remote we may get an error that says remote repo is not up to date. Instead of git pull to sycn. we `can git pull -r` so there wouldn't be merge conflict.
 
+### Git Ignore
+- .gitignore (Don't track certain files)
+- After adding .gitignore file and inclulde the name of the file that we want git to ignore, 
+- `git rm -r --cached <file name>` to update the remote repo by deleting the files. Then we git add ., git commit and git push
+
+### Git Stash
+- we have made a change and without commiting the change, git doesn't allow us to change branch
+- We use `git stash` to save the changes to commit later. To reach the changes later `git stash pop`
+
+### Going Back in History
+- `git log` to see a list of change history
+- `git checkout <commit hash>` to go to specific time in history
+- `git checkout <branch name>` to go back to most up-to-date branch
+
+### Undo Commit
+- git reset deletes the commit hash while git revert creates a new commit to revert the old commit's hash
+- `git reset --hard HEAD~1` undo the last 1 commit and cancel the change 
+- `git reset --soft HEAD~1` undo the last 1 commit but the change remains
+- `git reset --hard HEAD~1` and `git push --force` discard the last change in local and remote repo (not preferabble when you work in a team)
+- `git revert <commit hash>` creates a new commit to revert the old commit's change 
