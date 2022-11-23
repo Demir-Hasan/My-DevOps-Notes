@@ -185,9 +185,10 @@ metadata:
 - PV are not namespaced, accessible to whole cluster
 - Local vs. Remote Volumes?
 
-
-
-
+### Cluster Administration
+- RBAC : Role-Based Access Control
+- oc adm policy add-role-to-user admin randyhdemir -n randyhdemir-dev
+- 
 
 
 
