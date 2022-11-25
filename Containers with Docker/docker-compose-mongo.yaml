@@ -8,6 +8,8 @@ services:
     environment:
     - MONGO_INITDB_ROOT_USERNAME=admin
     - MONGO_INITDB_ROOT_PASSWORD=password
+    volumes:
+    - mongo-data:/data/db # For MongoDB its path is /data/db; for other db apps you should look it up. For example mysql: var/lib/mysql ; postgres:var/lib/postgrsql/data
   mongo-express:
     image: mongo
     ports:
@@ -16,3 +18,6 @@ services:
     - ME_CONFIG_MONGODB_ADMINUSERNAME=admin
     - ME_CONFIG_MONGODB_ADMINPASSWORD=password
     - ME_CONFIG_MONGODB_SERVER=mongodb
+volumes:
+  mongo-data:
+    driver: local
