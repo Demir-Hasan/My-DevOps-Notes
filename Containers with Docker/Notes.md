@@ -41,7 +41,7 @@ When you install Docker Engine you will have below:
 - `docker run -p6000:6379 {image name}` Host Port : 6000, Container Port: 6379. Different continers may have the same port number but they have to connect different ports of the host
 - `docker logs {container ID or container name}`
 - `docker run -d -p6001:6379 --name redis-older redis:6.2` 
-- `docker exec -ti {container ID} /bin/bash` 
+- `docker exec -ti {container ID} /bin/bash(or sh)` 
 
 ### Docker Network
 
@@ -115,5 +115,22 @@ CMD ["node", "/home/app/server.js"] (start the app with: "node server.js")
 ```
 
 - `docker build -t {name of the image:version} **.**`
-- ``
-- ``
+
+### Private Repository
+
+#### Login Private Repository
+
+- In order to push an image to a private repository, you need to be logged in the repository. In AWS, the command is provided by AWS.
+- For that AWS Cli should be installed and configurations need to be made
+- For deploying app to a server, the connection between the server and the private repository should be established prior to deployment.   
+
+### Docker Volumes
+1) You specified both the host and the container directories
+- `docker run -v /home/mount/data:/var/lib/mysql/data` (/home/mount/data --> host file systeme | /var/lib/mysql/data --> Virtual File System) data gets replicated automatically
+2) You specify only the container directory where the data will be persist
+- ` docker run -v /var/lib/mysql/data` for each container a folder is generated that gets mounted 
+3) You specify only the container directory with a name refrence
+- `docker run -v name:/var/lib/mysql/data` 
+- For example: 
+` volumes:
+- db-data:/var/lib/mysql/data ` 
