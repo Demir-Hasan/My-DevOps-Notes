@@ -29,7 +29,7 @@ When you install Docker Engine you will have below:
 ### Docker Commands
 - `docker pull` pulls an image from a public repo
 - `docker images` list the images that are hosted locally  
-- `docker run {image name:tag}` runs a container
+- `docker run {image name:tag}` runs a container from an image, if image is not locally hosted, docker pulls the latest version of the imaga from a public repo
 - `docker ps` lists running containers
 - `Ctrl + C` forces to stop a running container
 - `docker run -d {image name}` -d means start a container in a detached mode
@@ -37,7 +37,31 @@ When you install Docker Engine you will have below:
 - `docker start {container ID}`
 - `docker ps -a` shows all the containers that are running and not running
 - `docker run -p6000:6379 {image name}` Host Port : 6000, Container Port: 6379. Different continers may have the same port number but they have to connect different ports of the host
+- `docker logs {container ID or container name}`
+- `docker run -d -p6001:6379 --name redis-older redis:6.2` 
+- `docker exec -ti {container ID} /bin/bash` 
+
+### Docker Network
+
+- Containers live in an isolated environement. But if they are in the same network they can communicate with eachother
+- `docker network ls` lists predefined docker networks
+- `docker network create {a network name}`
+
+```
+Example:
+docker run -d \
+-p 27017:27017 (host port: container port) \
+-e MONGO_INITDB_ROOT_USERNAME=admin \
+e MONGO_INITDB_ROOT_PASSWORD=password \
+--name mongodb (we name our container) \
+--net mongo-network (assign our pre-created network) \
+mongo (name of the image which will be pulled from the repository)
+```
+
+
 - ``
 - ``
 - ``
-- 
+- ``
+- ``
+- ``
