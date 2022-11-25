@@ -29,6 +29,8 @@ When you install Docker Engine you will have below:
 ### Docker Commands
 - `docker pull` pulls an image from a public repo
 - `docker images` list the images that are hosted locally  
+- `docker rmi {image name of ID` removes the image
+- `docker rm {container name of ID` removes the container
 - `docker run {image name:tag}` runs a container from an image, if image is not locally hosted, docker pulls the latest version of the imaga from a public repo
 - `docker ps` lists running containers
 - `Ctrl + C` forces to stop a running container
@@ -109,14 +111,9 @@ RUN mkdir -p /home/app (basically, you can run any linux command here, creates /
 
 COPY . /home/app (copy current folder to /home/app folder inside the container, if we put RUN CP, it will copy things inside the container)
 
-CMD ["node", "server.js"] (start the app with: "node server.js")
+CMD ["node", "/home/app/server.js"] (start the app with: "node server.js")
 ```
 
-
-
-
-
-
-- ``
+- `docker build -t {name of the image:version} **.**`
 - ``
 - ``
