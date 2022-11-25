@@ -94,8 +94,29 @@ services:
     - ME_CONFIG_MONGODB_ADMINPASSWORD=password
     - ME_CONFIG_MONGODB_SERVER=mongodb
 ```
-- ``
-- ``
+- `docker-compose -f mongo.yaml up -d` when we run this command, docker fist creates a network and run the containers inside this network
+- `docker-compose -f mongo.yaml down` removes the container and deletes the network
+
+### Dockerfile
+
+```
+FROM Node (Start by basing it on another image, when created node will be available in the image we create)
+
+ENV MONGO_DB_USERNAME=admin \
+    MONGO_DB_PWD=password
+
+RUN mkdir -p /home/app (basically, you can run any linux command here, creates /home/app folder, it will live inside container)
+
+COPY . /home/app (copy current folder to /home/app folder inside the container, if we put RUN CP, it will copy things inside the container)
+
+CMD ["node", "server.js"] (start the app with: "node server.js")
+```
+
+
+
+
+
+
 - ``
 - ``
 - ``
