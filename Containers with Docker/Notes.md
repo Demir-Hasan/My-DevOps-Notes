@@ -48,18 +48,27 @@ When you install Docker Engine you will have below:
 - `docker network create {a network name}`
 
 ```
-Example:
+Example: MongoDB
 docker run -d \
 -p 27017:27017 (host port: container port) \
 -e MONGO_INITDB_ROOT_USERNAME=admin \
-e MONGO_INITDB_ROOT_PASSWORD=password \
---name mongodb (we name our container) \
+-e MONGO_INITDB_ROOT_PASSWORD=password \
+--name mongodb (we name our container, it will be the name of the server as well) \
 --net mongo-network (assign our pre-created network) \
 mongo (name of the image which will be pulled from the repository)
 ```
-
-
-- ``
+```
+Example: MongoExpress, connecting to MongoDB
+docker run -d \
+-p 8081:8081 \
+-e ME_CONFIG_MONGODB_ADMINUSERNAME=admin \
+-e ME_CONFIG_MONGODB_ADMINPASSWORD=password \
+--net mongo-network \
+--name mongo-express \
+-e ME_CONFIG_MONGODB_SERVER=mongodb \
+mongo-express
+```
+- When connection our app to mongodb we use mongo client in our node.js `MongoClient.connect('mongodb://username:password@localhost:27017',...`
 - ``
 - ``
 - ``
