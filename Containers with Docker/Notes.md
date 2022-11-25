@@ -69,6 +69,31 @@ docker run -d \
 mongo-express
 ```
 - When connection our app to mongodb we use mongo client in our node.js `MongoClient.connect('mongodb://username:password@localhost:27017',...`
+
+### Docker Compose
+
+- It will take care of networking between continers. We don't need to deal with creating a network and assigning our containers within the network
+
+```
+Example: mongo.yaml
+version: '3'
+services:
+  mongodb:
+    image: mongo
+    ports:
+    - 27017:27017
+    environment:
+    - MONGO_INITDB_ROOT_USERNAME=admin
+    - MONGO_INITDB_ROOT_PASSWORD=password
+  mongo-express:
+    image: mongo
+    ports:
+    - 8081:8081
+    environment:
+    - ME_CONFIG_MONGODB_ADMINUSERNAME=admin
+    - ME_CONFIG_MONGODB_ADMINPASSWORD=password
+    - ME_CONFIG_MONGODB_SERVER=mongodb
+```
 - ``
 - ``
 - ``
