@@ -132,5 +132,7 @@ CMD ["node", "/home/app/server.js"] (start the app with: "node server.js")
 3) You specify only the container directory with a name refrence
 - `docker run -v name:/var/lib/mysql/data` 
 - For example: 
-` volumes:
-- db-data:/var/lib/mysql/data ` 
+``` 
+volumes:
+- db-data:/var/lib/mysql/data 
+```
