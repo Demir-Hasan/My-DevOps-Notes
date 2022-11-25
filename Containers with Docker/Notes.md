@@ -137,4 +137,21 @@ volumes: (image level)
 - db-data:/var/lib/mysql/data 
 ```
 - If you use docker-compose-yaml file you should list all the volume names at the end of the yaml file at the same level with service
-- 
+- Docker Volume Location: /var/lib/docker/volumes
+
+### .Dockerignore
+
+```
+# Ignore cache and .git folders
+.git
+.cache
+
+# ignore all markdown files
+.md
+
+# Ignore sensitive files
+private.key
+setting.json
+```
+
+
