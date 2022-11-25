@@ -133,6 +133,8 @@ CMD ["node", "/home/app/server.js"] (start the app with: "node server.js")
 - `docker run -v name:/var/lib/mysql/data` 
 - For example: 
 ``` 
-volumes:
+volumes: (image level)
 - db-data:/var/lib/mysql/data 
 ```
+- If you use docker-compose-yaml file you should list all the volume names at the end of the yaml file at the same level with service
+- 
