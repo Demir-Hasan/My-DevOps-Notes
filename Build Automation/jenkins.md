@@ -53,11 +53,24 @@ When we "start build" we can track the job on terminal inside the container.
 
 `docker exec -ti [docker image ID] bash` `ls /var/jenkins_home/job & /var/jenkins_home/workspace`
 
-## Connecting Jenkins to Github (web-hook)
+### Connecting Jenkins to Github (web-hook)
 
 - On Jenkins UI, after we create a new project, at the build trigger section  we select Github hook trigger for GITScm polling.
 
 - Once we created a Jenkinsfile on Github and add the URL on Jenkins, we copy the Jenkins URL to our clipboard and paste it on GitHub - Settings - Webhooks  Payload URL. The end of the URL shoul be as : `....com/github-webhook/` Then the following selector shoul be set as content type: application/json. After adding a web hook github ping the Jenkins and then when we refresh the page we will see a green check mark. 
 
 - To give it a try we can add a text on Readme.md file. After we commit the changes, jenkins will be triggered automatically.
+
+### Jenkins Roles
+
+- Jenkins Administrator: Manages Jenkins, sets up Jenkins Cluster, Installs plugins, Backs up Jenkins data
+- Jenkins User: Creating the actual jobs to run workflows
+
+### Jenkins Tools, Plugins
+
+- Depending on the App (programing language) you need to have different tools installed and configured on Jenkins. (NPM for JS apps, Maven for Java apps)
+- So, there are 2 ways to have these tools: One is to install it as a plugin, other is installing it on the server directly (if jenkins running as a container, then inside the container: to login the Jenkins container as a root user `docker exec -u 0 -ti {container ID} bash`).
+- 
+
+- 
 
