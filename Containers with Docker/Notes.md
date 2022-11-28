@@ -42,6 +42,7 @@ When you install Docker Engine you will have below:
 - `docker logs {container ID or container name}`
 - `docker run -d -p6001:6379 --name redis-older redis:6.2` 
 - `docker exec -ti {container ID} /bin/bash(or sh)` 
+- `docker volume inspect {container name}` returns local mountpoint
 
 ### Docker Network
 
