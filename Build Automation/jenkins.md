@@ -69,8 +69,12 @@ When we "start build" we can track the job on terminal inside the container.
 ### Jenkins Tools, Plugins
 
 - Depending on the App (programing language) you need to have different tools installed and configured on Jenkins. (NPM for JS apps, Maven for Java apps)
-- So, there are 2 ways to have these tools: One is to install it as a plugin, other is installing it on the server directly (if jenkins running as a container, then inside the container: to login the Jenkins container as a root user `docker exec -u 0 -ti {container ID} bash`).
-- 
-
-- 
+- So, there are 2 ways to have these tools: One is to install it as a plugin, other is installing it on the server directly (if jenkins running as a container).
+1) to login the Jenkins container as a root user `docker exec -u 0 -ti {container ID} bash`).
+2) `apt update`
+3) `apt install curl`
+4) `curl -sL https://deb.nodesource.com/setup_10.x -o nodesource_setup.sh`
+5) `ls`
+6) `bash nodesource_setup.sh`
+7) `apt install node.js`  
 
