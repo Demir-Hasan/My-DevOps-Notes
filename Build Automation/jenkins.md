@@ -43,7 +43,7 @@ continer.
 
 ```
 docker run -p 8080:8080 -p 50000:50000 -d
--v jenkins_home:/var jenkins_home (re-attaching the old jenkins container data)
+-v jenkins_home:/var/jenkins_home (re-attaching the old jenkins container data)
 -v /var/run/docker.sock:/var/docker.sock
 -v $(which docker):/usr/bin/docker (makes docker available inside jenkins container)
 jenkins/jenkins:lts
