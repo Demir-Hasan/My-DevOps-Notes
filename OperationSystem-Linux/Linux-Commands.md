@@ -15,6 +15,7 @@
 - `cat /etc/os-release`
 - `lscpu`
 - `lsmem`
+- `ssh-keygen -t rsa`
 
 - `su -` [user]
 
