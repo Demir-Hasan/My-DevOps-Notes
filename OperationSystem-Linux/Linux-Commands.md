@@ -25,7 +25,7 @@
 
 ### HELP - MAN
 
-- `man test` to check file properties
+- `man test` test - check file types and compare values
 
 ### Working on the Internet
 - `curl http://localhost:8080/greatings` CURL will execute a GET to the provided URL `Hello world`
