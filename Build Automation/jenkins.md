@@ -6,7 +6,7 @@ There are 2 ways:
 ### Running Jenkins as a Docker Container
 Once we get the docker installed in our local/remote server, we use the following command to run Jenkins container:
 
-`docker run -p 8080:8080 -p 50000:50000 -d -v jenkins_home:/var/jenkins_home **jenkins/jenkins:lts**`
+`docker run -p 8080:8080 -p 50000:50000 -d -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts`
 
 Note that the name of the docker image is: jenkins/jenkins
 
